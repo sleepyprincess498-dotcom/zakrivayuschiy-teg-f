@@ -157,12 +157,16 @@
 }
 
 .button__text,
-.floppy__small use {
-  position: relative;
+.floppy__small {
+  mix-blend-mode: difference;
   z-index: 2;
-  color: var(--main-color);
-  transition: color 0.5s ease-in-out;
+  position: relative;
 }
+
+.floppy__small {
+  block-size: 21px;
+}
+
 
 .button {
   position: relative;
@@ -172,7 +176,7 @@
   border: var(--main-border);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
-  color: var(--main-color);
+  color: var(--button-color);
   overflow: hidden;
 }
 
@@ -193,11 +197,6 @@
   transform: translate(0, 0);
 }
 
-.button:hover .button__text,
-.button:hover .floppy__small use {
-  color: var(--bg-color)
-}
-
 .button:focus-visible {
   box-shadow: 2px 2px var(--main-color);
   outline: none;
@@ -211,6 +210,12 @@
   background-color: transparent;
   border: none;
   align-self: center;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  outline: var(--main-border);
+  outline-offset: -6px;
 }
 
 .like-icon {
@@ -300,12 +305,6 @@
   gap: 8px;
   flex-direction: var(--footer-flex-direction);
   margin-block-end: 100px;
-}
-
-.floppy__small {
-  block-size: 21px;
-  position: relative;
-  z-index: 1;
 }
 
 .dialog {
