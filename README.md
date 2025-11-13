@@ -1,1 +1,1 @@
-https://sleepyprincess498-dotcom.github.io/zakrivayuschiy-teg-f/
+https://github.com/sleepyprincess498-dotcom/zakrivayuschiy-teg-f.git
