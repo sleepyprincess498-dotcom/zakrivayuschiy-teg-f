@@ -99,6 +99,26 @@
   mix-blend-mode: hard-light;
 }
 
+@supports (-webkit-text-stroke-width: 1px) {
+  .decoration {
+    -webkit-text-stroke: 1px var(--bg-color);
+  }
+}
+
+@supports not (-webkit-text-stroke-width: 1px) {
+  .decoration {
+    text-shadow:
+      2px 0 var(--bg-color),
+      -2px 0 var(--bg-color),
+      0 2px var(--bg-color),
+      0 -2px var(--bg-color),
+      2px 2px var(--bg-color),
+      -2px -2px var(--bg-color),
+      -2px 2px var(--bg-color),
+      2px -2px var(--bg-color);
+  }
+}
+
 .post__image {
   position: relative;
   inline-size: 100%;
