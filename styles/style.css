@@ -91,7 +91,7 @@
 
 .decoration {
   position: absolute;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   color: var(--main-color);
   z-index: 1;
   -webkit-text-stroke: 1px var(--bg-color);
@@ -177,14 +177,14 @@
 }
 
 .floppy__small {
-  block-size: 21px;
+  block-size: var(--floppy-small-size);
 }
 
 
 .button {
   position: relative;
   background-color: var(--button-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   border: var(--main-border);
   cursor: pointer;
@@ -347,7 +347,7 @@
 
 .dialog__text {
   background-color: var(--bg-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 150%;
