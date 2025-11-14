@@ -13,9 +13,8 @@
 .page {
   font-family: var(--current-font), sans-serif;
   font-variation-settings: 'wght' var(--text-wght);
-  min-inline-size: var(--min-inline-size-section);
   min-block-size: 100dvb;
-  max-block-size: 1440px;
+  max-inline-size: 1440px;
   background: var(--page-pattern);
   background-size: cover;
   background-attachment: fixed;
@@ -32,9 +31,9 @@
 }
 
 .header {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   margin-block-start: 100px;
-  block-size: var(--header-block-size);
+  padding-block: var(--header-padding-block);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +80,10 @@
   gap: 25px;
 }
 
+.post__text p {
+  line-height: 21px;
+}
+
 .image__zone {
   inline-size: 100%;
   position: relative;
@@ -120,47 +123,37 @@
 }
 
 .post__image {
-  position: relative;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
-.clouds {
+.filter__brightness {
   filter: brightness(150%);
 }
 
-.me {
+.filter__invert {
   filter: invert(1);
 }
 
-.sunset {
+.filter__saturate {
   filter: saturate(120%);
 }
 
-.dream {
+.filter__sepia {
   filter: sepia(50%);
 }
 
-.beach {
+.filter__grayscale {
   filter: grayscale(0.5);
 }
 
-.sea {
+.filter__contrast {
   filter: contrast(150%);
 }
 
-.work {
+.filter__saturate-blur {
   filter: blur(4px) saturate(150%);
-}
-
-.post__image::after {
-  content: '</HTML>';
-  position: absolute;
-  z-index: 1;
-  font-size: 14px;
-  font-family: var(--accent-font);
-  color: var(--main-color);
 }
 
 .post__buttons {
@@ -209,12 +202,12 @@
   background-color: var(--main-color);
   left: 0;
   top: 0;
-  transform: translate(-100%, -20%);
+  transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
 }
 
 .button:hover::after {
-  transform: translate(0, 0);
+  transform: translateX(0);
 }
 
 .button:focus-visible {
@@ -223,7 +216,8 @@
 }
 
 .card__like-button {
-  padding: 10.2px 35.4px;
+  block-size: 38px;
+  inline-size: 130px;
 }
 
 .card__icon-button {
@@ -241,6 +235,8 @@
 .like-icon {
   transform-origin: center;
   cursor: pointer;
+  align-self: center;
+  margin-block-start: 5px;
 }
 
 .like-icon .sparks {
@@ -310,7 +306,7 @@
   block-size: 24px;
 }
 
-.footer {
+.footer__button {
   margin-block-start: 50px;
   margin-block-end: 100px;
   display: flex;

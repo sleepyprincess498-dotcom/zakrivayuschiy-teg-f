@@ -9,9 +9,9 @@
 }
 
 @font-face {
-    font-family: 'PressStart2P-Regular';
+    font-family: 'PressStart2P';
     src: 
-        local('PressStart2P-Regular'),
+        local('PressStart2P'),
         url(./PressStart2P-Regular.woff) format('woff');
     font-display: swap;
 }

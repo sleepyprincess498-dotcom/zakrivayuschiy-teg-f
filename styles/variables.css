@@ -1,5 +1,5 @@
 :root {
-    --accent-font: 'PressStart2P-Regular';
+    --accent-font: 'PressStart2P';
     --current-font: 'Inter-Variable';
     --main-color: #000;
     --bg-color: #fff;
@@ -8,19 +8,21 @@
     --title-wght: 715;
     --page-pattern: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%); 
     --gap-section: 50px;
-    --header-block-size: 368px;
+    --header-padding-block: 130px;
     --section--inline-size: 48.6%;
     --section-min-inline-size: 375px;
     --footer-flex-direction: row;
     --main-border: solid 2px #000;
-    --animation-fill-color: rgb(255 0 0);
+    --animation-fill-color: rgb(255 0 0); 
+    --floppy-big-size: 39px;
 }
 
 @media (max-width: 375px) {
     :root {
-        --header-block-size: 327px;
+        --header-padding-block: 122px;
         --margin-inline-section: 0;
         --footer-flex-direction: column;
         --section--inline-size: 100%;
+        --floppy-big-size: 28px;
     }
 }
